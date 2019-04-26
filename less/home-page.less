@@ -1,4 +1,47 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 img {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: auto;
+}
+
+.btn {
+    .btn-style (@border: 5px; @font: #707070;)
+}
+
+.icon {
+    width: 20%;
+    height: 0 auto;
+    display: block;
+}
+
+// media queries
+body {
+    @media @mobile {
+        background-color: lightslategray; //color for testing only
+    }
+
+    .bg {
+        @media @mobile {
+            width: 100%;
+            height: auto; 
+        }
+            
+        }
+
+    .img2 {
+        @media @mobile {
+            display: none;
+        }
+    } 
+    nav {
+        @media @mobile {
+            visibility: hidden;
+
+        }
+    }
 }
