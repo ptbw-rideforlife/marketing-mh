@@ -4,39 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ride for Life</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Mother's Hub</a>
-            <a href="#">Driver's Hub</a>
-        </nav>
-        
-        <h1>CTA</h1>
-        <h2></h2>
-        <button class="btn">Sign Up</button>
-        <button class="btn">Learn More</button>
-    </header>
-    <p>CTA2</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero esse molestiae eaque omnis consequuntur odio, repellendus consequatur nihil est accusantium provident, minima harum dolorem numquam reprehenderit dolorum voluptates earum.</p>
-    <img class="bg" src="assets/images/annie-spratt-135307-unsplash.jpg" alt="#">
-    <img class="icon" src="assets/icons/noun_Pregnant_643253.svg" alt="Pregnant woman icon">
-    <h2>Mother Signup</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero esse molestiae eaque omnis consequuntur odio, repellendus consequatur nihil est accusantium provident, minima harum dolorem numquam reprehenderit dolorum voluptates earum.</p>
-    <img class="img2" src="assets/images/annie-spratt-427337-unsplash.jpg" alt="#">
-    <img class="icon" src="assets/icons/noun_Motorcycle_53_000000.svg" alt="Man on motorcycle icon">
-    <h2>Become a driver</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero esse molestiae eaque omnis consequuntur odio, repellendus consequatur nihil est accusantium provident, minima harum dolorem numquam reprehenderit dolorum voluptates earum.</p>
-    <img src="assets/images/christian-holzinger-434798-unsplash.jpg" alt="#">
-    <img class="icon" src="assets/icons/noun_medical_2434391.svg" alt="Cell phone with medical cross sign">
-    <h2>Call a driver</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero esse molestiae eaque omnis consequuntur odio, repellendus consequatur nihil est accusantium provident, minima harum dolorem numquam reprehenderit dolorum voluptates earum.</p>
-    <div class= "bottomCTA"></div>
-<footer>Copyright 2019 &copy;</footer>
+        <header class="mobile-header-image">
+                <a href="#main-menu"
+                   id="main-menu-toggle"
+                   class="menu-toggle"
+                   aria-label="Open main menu">
+                  <span class="sr-only">Open main menu</span>
+                  <span class="fa fa-bars" aria-hidden="true"></span>
+                </a>
+                
+                <nav id="main-menu" class="main-menu" aria-label="Main menu">
+                  <a href="#main-menu-toggle"
+                     id="main-menu-close"
+                     class="menu-close"
+                     aria-label="Close main menu">
+                    <span class="sr-only">Close main menu</span>
+                    <span class="fa fa-times" aria-hidden="true"></span>
+                  </a>
+                  <ul>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Donate</a></li>
+                  </ul>
+                </nav>
+                <a href="#main-menu-toggle"
+                   class="backdrop"
+                   tabindex="-1"
+                   aria-hidden="true" hidden></a>
+
+                <h1 class="logo">Ride for Life</h1>
+                <div class="hero-text">
+                  <p class="main-cta">Ride for Life</p>
+                  <p>Safe Mothers. Safe Babies. Safe World.</p>
+                  <button id="sign-up-button" name="Sign Up">Sign Up</button>
+                  <button id="learn-more-button" name="Learn More">Learn More</button>
+                </div>
+              </header>
+        <div class="content-block-one">
+            <p>Reducing the Three Delays for Maternal and Child Survival</p>
+            <hr>
+            <p>SAFE serves mothers in Uganda to improve maternal and child survival. One of the biggest obstacles women face while pregnant is getting to a health facility to safely deliver.</p>
+        </div>
+        <img src="assets/images/annie-spratt-427337-unsplash.jpg" alt="#">
+        <p>Most people do not own a car or a motorcycle, and a majority live greater than 5 km from a health center (an hour by foot). Can you imagine trying to walk an hour on foot when you were pregnant, and in labor?</p>
+        <img class="icon" src="assets/icons/noun_Pregnant_643253.svg" alt="">
+        <img src="assets/images/christian-holzinger-434798-unsplash.jpg" alt="#">
+        <p>SAFE provides motorcycle ambulances to improve this problem, but mothers have a hard time contacting them in time. This app identifies and sends a text to the nearest motorcycle ambulance driver.</p>
+        <div class= "bottomCTA"></div>
+    <footer>Copyright 2019 &copy;</footer>
 </body>
 </html>

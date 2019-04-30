@@ -6,6 +6,26 @@ Links and buttons: #e89980
 Dark blue text and background: #4f6d7a
 Red buttons: #ED1111
 */
+#sign-up-button {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  color: #707070;
+  margin: 10px 0px;
+  padding: 5px;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 80%;
+}
+#learn-more-button {
+  background: transparent;
+  border-radius: 5px;
+  color: #f5f5f5;
+  margin: 10px 0px;
+  padding: 5px;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 80%;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -218,45 +238,207 @@ p {
 * {
   box-sizing: border-box;
 }
-nav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0% 10%;
-  background-color: #f5f5f5;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-nav a {
-  font-size: 1.6rem;
-  margin: auto 0;
-  padding: 20px 0px;
+/* Button styling */
+.menu-toggle {
+  display: inline-block;
+  padding: 0.75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fff;
+}
+.fa-bars {
+  border-radius: 5px;
+  padding: 10px 20px;
+  background: #bdbdbd;
+}
+/*
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+.main-menu {
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 2.5em 0 0;
+  /* Hide shadow w/ -8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  min-height: 100%;
+  width: 200px;
+  background: #4f6d7a;
+}
+.main-menu a {
+  display: block;
+  padding: 0.75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fff;
   text-decoration: none;
-  color: black;
+  border-bottom: 1px solid #cccccc;
+}
+nav .menu-close {
+  border: none;
+}
+.main-menu li:first-child a {
+  border-top: 1px solid #cccccc;
+}
+.main-menu a:hover,
+.main-menu a:focus {
+  background: #81a0ae;
+  text-decoration: underline;
+}
+.main-menu .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*
+ On small devices, allow it to toggle...
+*/
+/*
+ :target for non-JavaScript (optional)
+*/
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+}
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+.main-menu:target ul,
+.main-menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+.main-menu:target + .backdrop,
+.main-menu[aria-expanded="true"] + .backdrop {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #000;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: default;
+}
+@supports (position: fixed) {
+  .main-menu,
+  .main-menu:target + .backdrop,
+  .main-menu[aria-expanded="true"] + .backdrop {
+    position: fixed;
+  }
+}
+/*
+ Larger screen styling
+ Horizontal menu
+*/
+@media (min-width: 768px) {
+  .menu-toggle,
+  .main-menu .menu-close {
+    display: none;
+  }
+  /* Undo positioning of off-canvas menu */
+  .main-menu {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+    display: block;
+  }
+  .main-menu ul {
+    display: flex;
+    /* Undo off-canvas styling */
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+  .main-menu a {
+    color: #fff;
+    font-size: 1.6em;
+    border: 0 !important;
+    /* Remove borders from off-canvas styling */
+  }
+  .main-menu a:hover,
+  .main-menu a:focus {
+    background: none;
+    /* Remove background from off-canvas styling */
+    color: #000;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 header {
+  padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 40rem;
+  align-items: baseline;
+}
+.logo {
+  margin: 0 30px 0 10px;
+  font-size: 1.6em;
+  color: #fff;
+  margin-left: auto;
+}
+@media (max-width: 500px) {
+  header .logo {
+    display: none;
+  }
+}
+.mobile-header-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/annie-spratt-135307-unsplash.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 img {
   width: 100%;
   margin: auto;
-}
-.btn {
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  color: #707070;
-  padding: 10px;
-  font-size: 1.6rem;
-  text-align: center;
-  min-width: 30%;
-}
-@media (max-width: 500px) {
-  .btn {
-    width: 80%;
-    height: auto;
-  }
 }
 .icon {
   width: 20%;
@@ -265,22 +447,51 @@ img {
 }
 @media (max-width: 500px) {
   body {
-    background-color: lightslategray;
+    background-color: #f5f5f5;
+  }
+}
+body .hero-text {
+  width: 40rem;
+}
+@media (max-width: 500px) {
+  body .main-cta {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  body p {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 500px) {
+  body .content-block-one {
+    margin: 20px;
+    font-size: 2rem;
+    color: #707070;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  body p {
+    font-weight: 300;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  body hr {
+    margin: 15px;
+    color: #707070;
+  }
+}
+@media (max-width: 500px) {
+  body .icon {
+    height: auto;
   }
 }
 @media (max-width: 500px) {
   body .bg {
     width: 100%;
     height: auto;
-  }
-}
-@media (max-width: 500px) {
-  body .img2 {
-    display: none;
-  }
-}
-@media (max-width: 500px) {
-  body nav {
-    visibility: hidden;
   }
 }
