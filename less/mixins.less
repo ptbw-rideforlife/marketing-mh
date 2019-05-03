@@ -1,3 +1,4 @@
+// mobile first styles
 #sign-up-button {
   background-color: @background;
   border-radius: 5px;
@@ -24,12 +25,22 @@
 }
 
 #cta-btn {
-  background: @background;
+  background: white;
   border-radius: 5px;
   border-width: 1.5px;
   color: @darkgray;
-  font-size: 1.6rem;
-  width: 22em;
-  margin: 0 auto;
+  border-color: @light-gray;
+  font-size: 1.4rem;
+  width: 9em;
+  margin: auto;
+  padding: 5px 10px;
   height: 40px;
+}
+// Desktop media queries 
+
+#header-btn {
+  @media @large {
+    flex: 1 auto;
+    color: hotpink; 
+  }
 }

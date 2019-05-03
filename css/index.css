@@ -30,14 +30,22 @@ Red buttons: #ED1111
   width: 22em;
 }
 #cta-btn {
-  background: #f5f5f5;
+  background: white;
   border-radius: 5px;
   border-width: 1.5px;
   color: #707070;
-  font-size: 1.6rem;
-  width: 22em;
-  margin: 0 auto;
+  border-color: #cccccc;
+  font-size: 1.4rem;
+  width: 9em;
+  margin: auto;
+  padding: 5px 10px;
   height: 40px;
+}
+@media  all and (min-width: 501px) {
+  #header-btn {
+    flex: 1 auto;
+    color: hotpink;
+  }
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -464,7 +472,7 @@ body {
   background-color: #f5f5f5;
 }
 .mobile-header-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/annie-spratt-135307-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/annie-spratt-135307-unsplash.jpg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -478,6 +486,44 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+.main-cta {
+  font-size: 3.6em;
+}
+.content-block-one {
+  font-size: 2rem;
+  text-align: center;
+  color: #707070;
+  border-radius: 10px;
+  background: white;
+  margin: 5px;
+}
+.content-block-one img {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: solid 2px #cccccc;
+}
+.content-block-two {
+  background: white;
+  border-radius: 10px;
+  color: #707070;
+  margin: 5px;
+  border-bottom: solid 2px #cccccc;
+}
+.info-block-with-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  color: #707070;
+  margin: 5px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px #cccccc;
+}
+.info-block-with-img img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 img {
   height: auto;
@@ -498,14 +544,19 @@ img {
   margin-top: 30px;
   color: white;
 }
+.sign-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 input {
   background: #f0bcab;
   border-radius: 5px;
   border: none;
-  margin: 10px 0px;
+  margin: 10px;
   padding: 0.7em 2em;
   font-size: 1.6rem;
-  width: 22em;
+  width: 70%;
 }
 ::placeholder {
   font-weight: 100;
@@ -514,6 +565,7 @@ input {
 .bottom-CTA button {
   color: #e89980 !important;
   font-weight: 100;
+  max-width: 30%;
 }
 @media (max-width: 500px) {
   .hero-text {
@@ -537,13 +589,6 @@ input {
   p {
     font-size: 2em;
     padding: 2rem;
-  }
-}
-@media (max-width: 500px) {
-  .content-block-one {
-    font-size: 2rem;
-    color: #707070;
-    text-align: center;
   }
 }
 @media (max-width: 500px) {
@@ -576,5 +621,43 @@ input {
   .bg {
     width: 100%;
     height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .info-block-with-img {
+    justify-content: space-around;
+  }
+}
+@media  all and (min-width: 501px) {
+  .hero-text {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+@media  all and (min-width: 501px) {
+  .hero-text > * {
+    flex: 1 100%;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-one {
+    border-radius: 10px;
+    border: solid 1px hotpink;
+    font-size: 2rem;
+    text-align: center;
+    width: 70vw;
+    margin: auto;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-one img {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-two {
+    display: flex;
+    flex-flow: row-wrap;
   }
 }
