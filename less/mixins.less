@@ -1,21 +1,46 @@
+// mobile first styles
 #sign-up-button {
-    background-color: @background;
-    border-radius: 5px;
-    color: @font-color;
-    margin: 10px 0px;
-    padding: 5px;
-    font-size: 1.6rem;
-    text-align: center;
-    width: 80%;
+  background-color: @background;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-color: @background;
+  color: @font-color;
+  margin: 10px 0px;
+  padding: 0.7em 2em;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 22em;
 }
 
 #learn-more-button {
-    background: transparent;
-    border-radius: 5px;
-    color: @background;
-    margin: 10px 0px;
-    padding: 5px;
-    font-size: 1.6rem;
-    text-align: center;
-    width: 80%;
+  background: transparent;
+  border-radius: 5px;
+  border-width: 1.5px;
+  color: @background;
+  margin: 10px 0px;
+  padding: 0.7em 2em;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 22em;
+}
+
+#cta-btn {
+  background: white;
+  border-radius: 5px;
+  border-width: 1.5px;
+  color: @darkgray;
+  border-color: @light-gray;
+  font-size: 1.4rem;
+  width: 9em;
+  margin: auto;
+  padding: 5px 10px;
+  height: 40px;
+}
+// Desktop media queries 
+
+#header-btn {
+  @media @large {
+    flex: 1 auto;
+    color: hotpink; 
+  }
 }

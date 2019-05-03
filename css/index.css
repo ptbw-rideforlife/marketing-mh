@@ -9,22 +9,43 @@ Red buttons: #ED1111
 #sign-up-button {
   background-color: #f5f5f5;
   border-radius: 5px;
+  border-width: 1.5px;
+  border-color: #f5f5f5;
   color: #707070;
   margin: 10px 0px;
-  padding: 5px;
+  padding: 0.7em 2em;
   font-size: 1.6rem;
   text-align: center;
-  width: 80%;
+  width: 22em;
 }
 #learn-more-button {
   background: transparent;
   border-radius: 5px;
+  border-width: 1.5px;
   color: #f5f5f5;
   margin: 10px 0px;
-  padding: 5px;
+  padding: 0.7em 2em;
   font-size: 1.6rem;
   text-align: center;
-  width: 80%;
+  width: 22em;
+}
+#cta-btn {
+  background: white;
+  border-radius: 5px;
+  border-width: 1.5px;
+  color: #707070;
+  border-color: #cccccc;
+  font-size: 1.4rem;
+  width: 9em;
+  margin: auto;
+  padding: 5px 10px;
+  height: 40px;
+}
+@media  all and (min-width: 501px) {
+  #header-btn {
+    flex: 1 auto;
+    color: hotpink;
+  }
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -250,6 +271,9 @@ p {
 }
 /* Button styling */
 .menu-toggle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: inline-block;
   padding: 0.75em 15px;
   line-height: 1em;
@@ -420,8 +444,35 @@ header {
     display: none;
   }
 }
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.social-icons {
+  margin: auto;
+  padding: 10px;
+}
+small {
+  color: #cccccc;
+  font: 1.2em;
+  text-align: center;
+  padding: 5px;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+  color: #cccccc;
+  padding: 10px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+}
 .mobile-header-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/annie-spratt-135307-unsplash.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/annie-spratt-135307-unsplash.jpg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -436,62 +487,240 @@ header {
   transform: translate(-50%, -50%);
   color: white;
 }
+.main-cta {
+  font-size: 3.6em;
+}
+.content-block-one {
+  font-size: 2rem;
+  text-align: center;
+  color: #707070;
+  border-radius: 10px;
+  background: white;
+  margin: 5px;
+}
+.content-block-one img {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: solid 2px #cccccc;
+}
+.content-block-two {
+  background: white;
+  border-radius: 10px;
+  color: #707070;
+  margin: 5px;
+  border-bottom: solid 2px #cccccc;
+}
+.info-block-with-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  color: #707070;
+  margin: 5px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px #cccccc;
+}
+.info-block-with-img img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
 img {
+  height: auto;
   width: 100%;
-  margin: auto;
 }
 .icon {
   width: 20%;
   height: 0 auto;
   display: block;
+  padding-top: 10px;
+}
+.bottom-CTA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e89980;
+  padding: 18px;
+  margin-top: 30px;
+  color: white;
+}
+.sign-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+input {
+  background: #f0bcab;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  padding: 0.7em 2em;
+  font-size: 1.6rem;
+  width: 70%;
+}
+::placeholder {
+  font-weight: 100;
+  color: white;
+}
+.bottom-CTA button {
+  color: #e89980 !important;
+  font-weight: 100;
+  max-width: 30%;
 }
 @media (max-width: 500px) {
-  body {
-    background-color: #f5f5f5;
+  .hero-text {
+    width: 40rem;
   }
 }
-body .hero-text {
-  width: 40rem;
-}
 @media (max-width: 500px) {
-  body .main-cta {
-    font-size: 3rem;
+  .main-cta {
+    font-size: 3.5em;
   }
 }
 @media (max-width: 500px) {
-  body p {
-    font-size: 2.2rem;
+  img {
+    display: flex;
+    width: 100%;
+    height: 0 auto;
+    margin: auto;
   }
 }
 @media (max-width: 500px) {
-  body .content-block-one {
-    margin: 20px;
-    font-size: 2rem;
-    color: #707070;
-    text-align: center;
+  p {
+    font-size: 2em;
+    padding: 2rem;
   }
 }
 @media (max-width: 500px) {
-  body p {
+  h2 {
     font-weight: 300;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+  }
+}
+@media (max-width: 500px) {
+  p {
+    font-weight: 300;
+    font-size: 2rem;
     text-align: center;
   }
 }
 @media (max-width: 500px) {
-  body hr {
+  hr {
     margin: 15px;
     color: #707070;
   }
 }
 @media (max-width: 500px) {
-  body .icon {
+  .icon {
     height: auto;
   }
 }
 @media (max-width: 500px) {
-  body .bg {
+  .bg {
     width: 100%;
     height: auto;
   }
+}
+@media (max-width: 500px) {
+  .info-block-with-img {
+    justify-content: space-around;
+  }
+}
+@media  all and (min-width: 501px) {
+  .hero-text {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+@media  all and (min-width: 501px) {
+  .hero-text > * {
+    flex: 1 100%;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-one {
+    border-radius: 10px;
+    background: white;
+    font-size: 2rem;
+    text-align: center;
+    width: 80vw;
+    margin: auto;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-one img {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-two {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 30px;
+  }
+}
+@media  all and (min-width: 501px) {
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 49%;
+    height: 49%;
+    margin: auto;
+    padding: 20px;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+  height: 100%;
+}
+header {
+  margin-bottom: 2.5vw;
+}
+.mobile-header-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/annie-spratt-135307-unsplash.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.donate-cta {
+  color: #707070;
+  border-radius: 10px;
+  background: white;
+  border-bottom: solid 2px #cccccc;
+  border-top: #e6e6e6;
+  font-size: 2rem;
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+  padding: 2vw;
+}
+@media  all and (min-width: 501px) {
+  .donate-cta button {
+    padding: 2vw;
+  }
+}
+@media  all and (min-width: 501px) {
+  .donate-cta {
+    padding: 2vw;
+  }
+}
+@media (max-width: 500px) {
+  .donate-cta button {
+    margin-bottom: 3vw !important;
+  }
+}
+h1,
+p {
+  line-height: 1.6em;
 }

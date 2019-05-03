@@ -22,6 +22,7 @@
 ######################
 *.log
 node_modules/
+.vscode/
 
 # OS generated files #
 ######################
