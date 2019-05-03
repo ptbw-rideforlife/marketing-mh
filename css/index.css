@@ -642,10 +642,10 @@ input {
 @media  all and (min-width: 501px) {
   .content-block-one {
     border-radius: 10px;
-    border: solid 1px hotpink;
+    background: white;
     font-size: 2rem;
     text-align: center;
-    width: 70vw;
+    width: 80vw;
     margin: auto;
   }
 }
@@ -658,6 +658,69 @@ input {
 @media  all and (min-width: 501px) {
   .content-block-two {
     display: flex;
-    flex-flow: row-wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 30px;
   }
+}
+@media  all and (min-width: 501px) {
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 49%;
+    height: 49%;
+    margin: auto;
+    padding: 20px;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f5f5f5;
+  height: 100%;
+}
+header {
+  margin-bottom: 2.5vw;
+}
+.mobile-header-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/annie-spratt-135307-unsplash.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.donate-cta {
+  color: #707070;
+  border-radius: 10px;
+  background: white;
+  border-bottom: solid 2px #cccccc;
+  border-top: #e6e6e6;
+  font-size: 2rem;
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+  padding: 2vw;
+}
+@media  all and (min-width: 501px) {
+  .donate-cta button {
+    padding: 2vw;
+  }
+}
+@media  all and (min-width: 501px) {
+  .donate-cta {
+    padding: 2vw;
+  }
+}
+@media (max-width: 500px) {
+  .donate-cta button {
+    margin-bottom: 3vw !important;
+  }
+}
+h1,
+p {
+  line-height: 1.6em;
 }

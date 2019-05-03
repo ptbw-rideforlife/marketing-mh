@@ -213,10 +213,10 @@ hr {
 .content-block-one {
   @media @large {
     border-radius: 10px;
-    border: solid 1px hotpink;
+    background: white;
     font-size: 2rem;
     text-align: center;
-    width: 70vw;
+    width: 80vw;
     margin: auto;
   }
 }
@@ -231,6 +231,21 @@ hr {
 .content-block-two {
   @media @large {
     display: flex;
-    flex-flow: row-wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 30px;
+  }
+}
+
+.info-block {
+  @media @large {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 49%;
+    height: 49%;
+    margin: auto;
+    padding: 20px;
   }
 }
