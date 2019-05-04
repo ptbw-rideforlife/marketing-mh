@@ -637,6 +637,12 @@ input {
   }
 }
 @media  all and (min-width: 501px) {
+  .hero-text a {
+    max-width: 20vw;
+    margin: auto;
+  }
+}
+@media  all and (min-width: 501px) {
   .content-block-one {
     border-radius: 10px;
     background: white;

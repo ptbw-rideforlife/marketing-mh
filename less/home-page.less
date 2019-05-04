@@ -130,7 +130,7 @@ input {
   width: 70vw;
 }
 
-// Mobile styling
+// Mobile specific styling
 
 .hero-text {
   @media @mobile {
@@ -209,6 +209,15 @@ hr {
   @media @large {
     > * {
       flex: 1 100%;
+    }
+  }
+}
+
+.hero-text {
+  @media @large {
+    a {
+      max-width: 20vw;
+      margin: auto;
     }
   }
 }
