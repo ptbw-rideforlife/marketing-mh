@@ -32,15 +32,15 @@ Red buttons: #ED1111
 }
 #cta-btn {
   background: white;
+  border: solid 1.5px #cccccc;
   border-radius: 5px;
-  border-width: 1.5px;
   color: #707070;
-  border-color: #cccccc;
-  font-size: 1.4rem;
-  width: 9em;
-  margin: auto;
-  padding: 5px 10px;
-  height: 40px;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  width: 70vw;
+  margin: 10px auto;
+  padding: 10px 0px;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
