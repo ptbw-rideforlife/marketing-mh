@@ -527,6 +527,12 @@ img {
   height: auto;
   width: 100%;
 }
+hr {
+  border: none;
+  background: #cccccc;
+  height: 2px;
+  margin: 15px;
+}
 .icon {
   width: 20%;
   height: 0 auto;
@@ -604,12 +610,6 @@ input {
   }
 }
 @media (max-width: 500px) {
-  hr {
-    margin: 15px;
-    color: #707070;
-  }
-}
-@media (max-width: 500px) {
   .icon {
     height: auto;
   }
@@ -648,14 +648,26 @@ input {
     background: white;
     font-size: 2rem;
     text-align: center;
-    width: 80vw;
+    width: 90vw;
     margin: auto;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-one hr {
+    width: 60vw;
+    margin: 10px auto;
   }
 }
 @media  all and (min-width: 501px) {
   .content-block-one img {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    border-bottom: solid 2px #cccccc;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-one p {
+    font-size: 2rem;
   }
 }
 @media  all and (min-width: 501px) {
@@ -664,7 +676,13 @@ input {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 10px 30px;
+    width: 90vw;
+    margin: 2vw auto;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-two hr {
+    display: none;
   }
 }
 @media  all and (min-width: 501px) {
@@ -672,10 +690,43 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     width: 49%;
     height: 49%;
     margin: auto;
     padding: 20px;
+  }
+}
+@media  all and (min-width: 501px) {
+  .content-block-three {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    margin: 2vw auto;
+  }
+}
+@media  all and (min-width: 501px) {
+  .info-block-with-img {
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+  }
+}
+@media  all and (min-width: 501px) {
+  .info-block-with-img a {
+    max-width: 20vw;
+  }
+}
+@media  all and (min-width: 501px) {
+  .info-block-with-img h2,
+  p {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 0 5px;
   }
 }
 body {
