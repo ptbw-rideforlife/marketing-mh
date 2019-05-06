@@ -805,10 +805,30 @@ p {
   transition: all 1s ease;
 }
 .card {
-  background: hotpink;
+  display: flex;
   min-width: 180px;
   height: 180px;
   margin-right: 16px;
   display: inline-block;
   border-radius: 5px;
+}
+li {
+  display: flex;
+  margin: auto;
+}
+img {
+  width: 100%;
+  height: 75%;
+  margin: auto;
+  border-radius: 5px;
+  background-size: cover;
+}
+.button-wrapper button {
+  color: white;
+  font-weight: 900;
+  font-size: 1.5rem;
+  background: transparent;
+  border-radius: 5px;
+  background: solid 1px white;
+  padding: 5px;
 }
